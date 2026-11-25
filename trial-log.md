@@ -46,4 +46,8 @@ Discarded candidates:
 
 ## Bundle / check
 
-- (to be filled with real bundle + check results)
+- Bundle v1 attempt (2026-11-25 ~18:10 WITA): FAILED, no bundle written — "the run record is not whole: the earliest session opens with no message of the person's in words" (subagent hand-off session; expected per the brief — coordinator re-bundles with the prompt file).
+  - Command used: `bundle --repo <repo> --out bundle-v1.tar.gz --session /home/hatch/agents/agent-8a04d437-bcd3-478d-a713-f511d2fbc5ba/sessions/8a04d437-bcd3-478d-a713-f511d2fbc5ba.jsonl --no-discover --no-family --harness muse-app --harness-version 1.3 --model muse-spark-1.3 --provider meta --effort default --mcp none`, TMPDIR=$PWD/tmp.
+  - No `--prompt-origin handed-off`, no `--parent-session`, no builder-written prompt file (per the brief).
+- Check: NOT RUN — needs `--transcripts <bundle.tar.gz>`; no bundle exists yet. Coordinator to run after re-bundle.
+- Repo state at handoff: HEAD `95f349ffbb640e519d24e8a80d497b5038252e87` (commit below), remote HEAD matches, tree clean, About verified (homepage + topics makefun/ai-agents/bounties).
